@@ -108,6 +108,7 @@ body {
 
 .container .right .btn:hover {
     background-color: hsl(158, 74%, 13%);
+    cursor: pointer;
 }
 
 .btn a {
