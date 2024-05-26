@@ -1,19 +1,149 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
 :root {
     --clr-primary-Dark-cyan: hsl(158, 36%, 37%);
     --clr-primary-Cream: hsl(30, 38%, 92%);
     --clr-neutral-Very-dark-blue: hsl(212, 21%, 14%);
     --clr-neutral-Dark-grayish-blue: hsl(228, 12%, 48%);
-    --clr-White: hsl(0, 0%, 100%)
+    --clr-White: hsl(0, 0%, 100%);
 }
 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
+body {
+    background-color: var(--clr-primary-Cream);
+    width: 100%;
+    min-height: 100vph;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
 
+.container {
+    background-color: var(--clr-White);
+    width: 530px;
+    display: flex;
+    border-radius: 12px;
+    margin: 7rem;
+}
+
+.container .left {
+    width: 50%;
+}
+
+.container .left img {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px 0 0 10px;
+}
+
+.container .right {
+    width: 50%;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.container .right .bold {
+    font-family: "Montserrat";
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    font-size: 12px;
+    color: var(--clr-neutral-Dark-grayish-blue);
+}
+
+.container .right h1 {
+    font-weight: 700;
+    font-family: "Fraunces";
+    line-height: 2rem;
+}
+
+.container .right .diff-font {
+    font-family: "Montserrat";
+    color: var(--clr-neutral-Dark-grayish-blue);
+    font-size: 0.875rem;
+    line-height: 1.5rem;
+}
+
+.container .right .price {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+ 
+.container .right .price span {
+    font-weight: 700;
+    font-size: 1.8rem;
+    font-family:"Fraunces";
+    color: var(--clr-primary-Dark-cyan);
+}
+
+.container .right .price p {
+    font-size: 0.875rem;
+    text-decoration: line-through;
+    color: var(--clr-neutral-Dark-grayish-blue);
+    font-family: "Montserrat";
+}
+
+.container .right .btn {
+    font-family: "Montserrat";
+    font-size: 0.875rem;
+    font-weight: 600;
+    width: 100%;
+    background-color: var(--clr-primary-Dark-cyan);
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    border-radius: 8px;
+}
+
+.container .right .btn:hover {
+    background-color: hsl(158, 74%, 13%);
+}
+
+.btn a {
+    text-decoration: none;
+    color: var(--clr-White);
+}
 
 .attribution { 
     font-size: 11px; 
+    font-family: "Montserrat";
     text-align: center; 
+    margin-top: 40px;
 }
 
 .attribution a { 
     color: hsl(228, 45%, 44%); 
+}
+
+@media (max-width: 543px) {
+    .container {
+        width: 330px;
+        flex-direction: column;
+    }
+    .container .left {
+        height: 230px;
+        width: 100%;
+    }
+    .container .left img {
+        border-radius: 12px 12px 0 0;
+        object-fit: cover;
+        object-position: center;
+    }
+    .container .right {
+        width: 100%;
+    }
+    .attribution {
+        margin-top: 20px;
+    }
 }
